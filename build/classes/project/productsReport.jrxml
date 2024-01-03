@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e3a44fd-760d-4823-8a28-0089e68e5dca">
+	<property name="ireport.zoom" value="1.3310000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="prod_id" class="java.lang.String"/>
+	<field name="prod_name" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
+	<field name="mrp" class="java.lang.String"/>
+	<field name="import_price" class="java.lang.String"/>
+	<field name="exp_date" class="java.lang.String"/>
+	<field name="imp_date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="0" width="224" height="33" uuid="5d5be3b2-0785-4850-9bfe-ce6ebbf4e739"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sahil's Grocery Store]]></text>
+			</staticText>
+			<textField pattern="yyyy.MMMMM.dd GGG hh:mm aaa">
+				<reportElement x="389" y="53" width="166" height="20" uuid="def7833e-b38f-4d9f-aacd-0b085a163f5e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="208" y="33" width="181" height="20" uuid="54a7ed17-7fc7-4542-8c20-62439301a271"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[New Delhi, Delhi-110086]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="0" width="156" height="20" uuid="03ea0149-b3b0-4a04-bba7-5cfcdfd43448"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT's REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="c3641254-d10d-4509-93a3-6b7206c426f7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="100" height="20" uuid="bff2a9bd-17a0-4a5e-ba69-a6758fac6af5"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="0" width="70" height="20" uuid="b3af20c2-f3f7-443f-9259-88a3c8db9345"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="0" width="58" height="20" uuid="1acfeaa3-f92c-497b-b7d8-3bb85fa98a00"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MRP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="68" height="20" uuid="903997d4-ea2f-4794-821c-40dd72d79ffb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Import Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="0" width="100" height="20" uuid="3c1bcab1-12b2-4dfb-869d-0b0aa98ec238"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exp Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="0" width="96" height="20" uuid="e91a37ab-c163-4637-a461-59af74924f55"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Import Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="20" width="595" height="20" uuid="a6e121bf-a297-4e17-93e4-94ef380cadca"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="63" height="20" uuid="7d92b3d9-dc21-4a32-9c48-992ea8fced15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{prod_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="100" height="20" uuid="d3619c9c-1c86-42fb-b597-f22ed90782c4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{prod_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="0" width="70" height="20" uuid="c45e8959-5f02-412a-a4b8-f841f0e0fc3f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="0" width="58" height="20" uuid="d559adb8-1a74-4cc8-bc25-171c41f1f2ac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mrp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="68" height="20" uuid="1f094523-71e5-4700-bccc-5e2e4884edc0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{import_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="100" height="20" uuid="4e033f7c-41d7-4d3c-9295-6d8b4be7e732"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{exp_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="0" width="96" height="20" uuid="ef95e69e-3a58-42b8-a7b8-5876253c817d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{imp_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="595" height="20" uuid="1bbed413-b96c-45b3-a469-b6378ac3ff99"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="233" y="15" width="108" height="22" uuid="0088a126-158a-4689-9cf2-67ef9d6785bd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
